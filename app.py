@@ -22,8 +22,7 @@ st.set_page_config(
 # ------------------------------
 # LOAD LOGO
 # ------------------------------
-logo_path = r"Z:\NEU\ALY 6980 - Capstone Project\Assignment\Week 11\dashboard logos\ahrq_logo.jpg"
-logo = Image.open(logo_path)
+logo = Image.open("ahrq_logo.jpg")
 
 # ------------------------------
 # HEADER WITH TITLE + LOGO
@@ -112,7 +111,7 @@ Predict **Year-2 healthcare expenditure categories** (Low, Medium, High) using Y
 
 @st.cache_data
 def load_data():
-    path = r"Z:/NEU/ALY 6980 - Capstone Project/outputs/MEPS_Final.csv"
+    path = "MEPS_Final.csv"
     df = pd.read_csv(path)
     return df
 
